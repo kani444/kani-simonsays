@@ -10,9 +10,9 @@
 ```lua
   local result = exports['kani-simonsays']:startSimonSays(stages)
   if result then
-    print('success')
+      print('success')
   else
-    print('fail')
+      print('fail')
   end
 ```
 - Return `true`/`false`
