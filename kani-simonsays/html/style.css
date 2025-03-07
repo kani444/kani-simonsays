@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	height: 100%;
+	user-select: none;
+	font-family: 'Alexandria';
+}
+
+.wrapper {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.container {
+	height: 515px;
+	width: 380px;
+	background-color: rgba(27, 31, 38, 0.98);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 20px;
+	gap: 20px;
+}
+
+.header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+
+	color: #fff;
+	font-weight: 600;
+	font-size: 32px;
+}
+
+.footer {
+	position: relative;
+
+	width: 100%;
+}
+
+.proggresbar {
+	position: absolute;
+
+	width: 100%;
+	height: 8px;
+
+	background-color: rgba(168, 168, 168, 0.15);
+	border: 1px solid rgba(168, 168, 168, 0.15);
+	overflow: hidden;
+
+	transition: width 0.3s ease-in-out;
+}
+
+.proggres {
+	position: absolute;
+	left: 0;
+
+	height: 8px;
+	width: 50%;
+
+	background-color: rgba(168, 168, 168, 0.15);
+	border: 1px solid rgba(168, 168, 168, 0.15);
+}
+
+.minigame-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 16px;
+
+	width: 100%;
+}
+
+.done-content {
+	display: flex;
+	width: 100%;
+	gap: 5px;
+}
+
+.done {
+	transition: 1.5s;
+	flex-grow: 1;
+	height: 8px;
+	background-color: rgba(168, 168, 168, 0.15);
+	border: 1px solid rgba(168, 168, 168, 0.15);
+}
+
+.field-content {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+
+	width: 100%;
+	height: 340px;
+}
+
+.field {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 85px;
+	height: 85px;
+
+	background-color: rgba(168, 168, 168, 0.15);
+	border: 1px solid rgba(168, 168, 168, 0.15);
+
+	color: #fff;
+	font-size: 32px;
+	font-weight: 600;
+
+	cursor: pointer;
+}
+
+.result-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	color: #fff;
+	font-size: 32px;
+	font-weight: 600;
+
+	gap: 16px;
+	width: 100%;
+}
+
+/* FIELDS / PROGGRES / DONE COLORS */
+
+.color-1 {
+	background-color: rgba(60, 47, 36, 0.3);
+	border: 1px solid rgba(60, 47, 36, 0.3);
+}
+
+.color-2 {
+	background-color: rgba(60, 36, 52, 0.3);
+	border: 1px solid rgba(60, 36, 52, 0.3);
+}
+
+.color-3 {
+	background-color: rgba(36, 36, 60, 0.3);
+	border: 1px solid rgba(36, 36, 60, 0.3);
+}
+
+.color-4 {
+	background-color: rgba(36, 58, 60, 0.3);
+	border: 1px solid rgba(36, 58, 60, 0.3);
+}
+
+.color-5 {
+	background-color: rgba(40, 84, 62, 0.3);
+	border: 1px solid rgba(40, 84, 62, 0.3);
+}
+
+.color-6 {
+	background-color: rgba(58, 38, 67, 0.3);
+	border: 1px solid rgba(58, 38, 67, 0.3);
+}
+
+.color-7 {
+	background-color: rgba(69, 94, 111, 0.3);
+	border: 1px solid rgba(69, 94, 111, 0.3);
+}
+
+.color-8 {
+	background-color: rgba(13, 71, 137, 0.2);
+	border: 1px solid rgba(13, 71, 137, 0.2);
+}
+
+.color-9 {
+	background-color: rgba(60, 36, 36, 0.3);
+	border: 1px solid rgba(60, 36, 36, 0.3);
+}
+
+.color-10 {
+	background-color: rgba(32, 11, 58, 0.2);
+	border: 1px solid rgba(32, 11, 58, 0.2);
+}
+
+.color-11 {
+	background-color: rgba(36, 60, 36, 0.3);
+	border: 1px solid rgba(36, 60, 36, 0.3);
+}
+
+.color-12 {
+	background-color: rgba(170, 0, 128, 0.1);
+	border: 1px solid rgba(170, 0, 128, 0.1);
+}
+
+.color-13 {
+	background-color: rgba(56, 60, 36, 0.3);
+	border: 1px solid rgba(56, 60, 36, 0.3);
+}
+
+.color-14 {
+	background-color: rgba(194, 0, 0, 0.1);
+	border: 1px solid rgba(194, 0, 0, 0.1);
+}
+
+.color-15 {
+	background-color: rgba(15, 88, 88, 0.2);
+	border: 1px solid rgba(15, 88, 88, 0.2);
+}
+
+.color-16 {
+	background-color: rgba(138, 27, 190, 0.15);
+	border: 1px solid rgba(138, 27, 190, 0.15);
+}
+
+.proggres-failed {
+	background-color: rgba(83, 14, 14, 0.7);
+	border: 1px solid rgba(83, 14, 14, 0.7);
+}
+
+.proggres-completed {
+	background-color: rgba(22, 83, 14, 0.7);
+	border: 1px solid rgba(22, 83, 14, 0.7);
+}
+
+.done-completed {
+	background-color: rgba(22, 83, 14, 0.72);
+	border: 1px solid rgba(22, 83, 14, 0.72);
+}
+
+.done-failed {
+	background-color: rgba(83, 14, 14, 0.72);
+	border: 1px solid rgba(83, 14, 14, 0.72);
+}
+
+.done-doing {
+	animation: pulseDoingColors 1.5s infinite alternate;
+}
+
+@keyframes pulseDoingColors {
+	0% {
+		background-color: rgba(168, 168, 168, 0.15);
+	}
+	50% {
+		background-color: rgba(255, 255, 255, 0.2);
+	}
+	100% {
+		background-color: rgba(168, 168, 168, 0.15);
+	}
+}
