@@ -8,11 +8,11 @@
 **`stages`: Liczba poziomów do ukończenia**
 
 ```lua
-  local result = exports['kani-simonsays']:startSimonSays(stages)
-  if result then
-      print('success')
-  else
-      print('fail')
-  end
+local result = exports['kani-simonsays']:startSimonSays(stages)
+if result then
+    print('success')
+else
+    print('fail')
+end
 ```
 - Return `true`/`false`
